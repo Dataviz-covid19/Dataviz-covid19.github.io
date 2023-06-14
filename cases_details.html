@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@100;300;400;700;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Covid Cases Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link href="../static/css/bar_css.css" rel="stylesheet" />
+  </head>
+  <style>
+    .waffle {
+      margin-left: 0px;
+      background-color: white;
+      width: 49.2%;
+    }
+  </style>
+  <body>
+    <div class="mainContainer">
+      <div class="nav">
+        <div class="logo"><h3>DataVis</h3></div>
+        <ul>
+          <a href="/index.html"><li>Cases & Deaths</li></a>
+          <a href="/vaccination.html"><li>Vaccinations</li></a>
+          <a href="/index.html"><li>Hospitalized</li></a>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="heading">
+          <h2>Total Cases Total Vaccinations</h2>
+        </div>
+        <div class="waffle">
+          <div id="waffle"></div>
+          <script src="../../charts/waffle.js"></script>
+        </div>
+
+        <div id="line"></div>
+        <script src="../../charts/line_chart.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

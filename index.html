@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@100;300;400;700;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link href="static/css/bar_css.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="static/css/styles.css" />
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+
+  <body class="body">
+    <div class="mainContainer">
+      <div class="nav">
+        <div class="logo"><h3>DataVis</h3></div>
+        <ul>
+          <a href="/index.html"><li>Cases & Deaths</li></a>
+          <a href="/vaccination.html"><li>Vaccinations</li></a>
+          <a href="/hospitalized.html"><li>Hospitalized</li></a>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="heading">
+          <h2>World Map of Total Cases</h2>
+        </div>
+
+        <div class="filterInputs">
+          <select id="continent-select">
+            <option value="all">All Continent</option>
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+          <select id="death-filter">
+            <option value="all">All Countries</option>
+            <option value="top10death">Top 10 Countries by deaths</option>
+            <option value="top10cases">Top 10 Countries by cases</option>
+          </select>
+          <input
+            type="text"
+            id="country-filter"
+            placeholder="Enter a Country Name"
+          />
+        </div>
+        <div class="worldMap">
+          <div class="tooltip"></div>
+          <div id="map"></div>
+          <script src="charts/map_totalcases.js"></script>
+        </div>
+      </div>
+
+      <div class="container1">
+        <div>
+          <div id="pie"></div>
+          <script src="charts/Pie.js"></script>
+        </div>
+        <div>
+          <div class="tooltip-bubble"></div>
+          <div id="bubble"></div>
+          <script src="charts/bubblescript.js"></script>
+        </div>
+      </div>
+
+      <div class="container2">
+        <div>
+          <div id="barchart"></div>
+          <div id="tooltip" class="hidden"></div>
+          <script src="charts/barchart.js"></script>
+        </div>
+        <div>
+          <div id="barchart2"></div>
+          <div id="tooltip" class="hidden"></div>
+          <script src="charts/barchart2.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
