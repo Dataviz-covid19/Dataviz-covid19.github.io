@@ -149,7 +149,7 @@ const drawChart = async () => {
     .on("click", (a, b) => {
       let currentCountry = b.properties.name;
       localStorage.setItem("CurrentCounty", currentCountry);
-      window.open("vaccine_details.html", "_blank");
+      window.open("vaccination.html", "_blank");
     })
     .on("mousemove", function (e, d) {
       d3.select(this).transition().duration(100).attr("fill", "#afedc0");
